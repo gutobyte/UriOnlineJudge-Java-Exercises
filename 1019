@@ -1,0 +1,28 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner scan = new Scanner(System.in);
+		 
+		int DURACAO, HORAS, MINUTOS, SEGUNDOS, HORA, RESTOH, RESTOM;
+		
+		DURACAO = scan.nextInt();
+			
+		HORAS = DURACAO / 3600;
+		RESTOH = DURACAO % 3600;
+		
+		MINUTOS = RESTOH / 60;
+		RESTOM = RESTOH % 60;
+		
+		SEGUNDOS = RESTOM;
+		
+		
+				
+		System.out.println(HORAS + ":" + MINUTOS + ":" + SEGUNDOS);
+ 
+    }
+ 
+}
