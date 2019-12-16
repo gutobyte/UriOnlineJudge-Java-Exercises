@@ -1,0 +1,45 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+  Scanner scan= new Scanner(System.in);
+		
+		int n;
+		n=scan.nextInt();
+		int vetor[]= new int[n];
+		int v=0;
+		int vx=0;
+				
+		
+
+		
+		for(int i=0;i<vetor.length;i++)
+		{
+
+			vetor[i]=scan.nextInt();
+
+		}
+		
+		
+		vx = vetor[0];
+		
+		for(int i=0;i<vetor.length;i++)
+		{
+
+			if(vetor[i] < vx) {
+				v = i+1;
+				break;
+			} 
+			
+			vx = vetor[i];
+
+		}
+		
+         System.out.println(v);
+
+	}
+
+}
