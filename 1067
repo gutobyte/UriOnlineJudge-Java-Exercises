@@ -1,0 +1,29 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+     Scanner scan = new Scanner(System.in);
+		
+		int x,soma=0,impar=0,par=0;
+		
+		x =scan.nextInt();
+		
+		for(int i=0;i<=x;i++)
+		{
+			
+			soma++;  
+			
+			
+			if(soma%2==0) 
+			{
+			continue;
+			}
+			System.out.println(soma);
+		}
+ 
+    }
+ 
+}
