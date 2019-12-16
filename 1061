@@ -1,0 +1,83 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner scan =new Scanner(System.in);
+        String string;
+        int diaInicio, diaFinal, horaInicio, horaFinal, minutoInicio, minutoFinal, segundoInicio, segundoFinal;
+        int dia = 0, hora = 0, minuto = 0, segundo = 0;
+        boolean bool_h = false, bool_m = false, bool_s = false;
+        
+
+        string = scan.next();
+        diaInicio =scan.nextInt();
+        
+
+        horaInicio =scan.nextInt();
+        string =scan.next();
+        minutoInicio =scan.nextInt();
+        string =scan.next();
+        segundoInicio =scan.nextInt();
+     
+
+        string =scan.next();
+        diaFinal =scan.nextInt();
+       
+
+        horaFinal =scan.nextInt();
+        string =scan.next();
+        minutoFinal =scan.nextInt();
+        string =scan.next();
+        segundoFinal =scan.nextInt();
+
+
+        if(horaInicio > horaFinal)
+            bool_h = true;
+        if(minutoInicio > minutoFinal)
+            bool_m = true;
+        if(segundoInicio > segundoFinal)
+            bool_s = true;
+
+        while(diaInicio != diaFinal)  {
+                dia++;   diaInicio++;
+        }
+
+        while(horaInicio != horaFinal){
+                hora++;
+                horaInicio++;
+                if(horaInicio == 25)
+                    horaInicio = 1;
+        }
+
+        while(minutoInicio != minutoFinal)  {
+                minuto++;
+                minutoInicio++;
+                if(minutoInicio == 61)
+                    minutoInicio = 1;
+                }
+
+        while(segundoInicio != segundoFinal)  {
+                segundo++;
+                segundoInicio++;
+                if(segundoInicio == 61)
+                    segundoInicio = 1;
+                }
+
+        if(bool_h == true)
+            dia--;
+        if(bool_m == true)
+            hora--;
+        if(bool_s == true)
+            minuto--;
+        
+        System.out.print(dia+" dia(s)\n");
+        System.out.print(hora+" hora(s)\n");
+        System.out.print(minuto+" minuto(s)\n");
+        System.out.print(segundo+" segundo(s)\n");
+ 
+    }
+ 
+}
