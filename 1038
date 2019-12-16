@@ -1,0 +1,47 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+
+Scanner scan = new Scanner(System.in);
+DecimalFormat formatador = new DecimalFormat("0.00");
+
+int CODIGO, QUANTIDADE;
+double CACHORRO, SALADA, BACON, TORRADA, REFRI;
+
+CODIGO = scan.nextInt();
+QUANTIDADE = scan.nextInt();
+
+CACHORRO = QUANTIDADE * 4.00;
+SALADA = QUANTIDADE * 4.50;
+BACON = QUANTIDADE * 5.00;
+TORRADA = QUANTIDADE * 2.00;
+REFRI = QUANTIDADE * 1.50;
+
+
+if (CODIGO == 1)
+{
+    System.out.println("Total: R$ " + formatador.format(CACHORRO) );
+}
+ else if (CODIGO == 2)
+ {
+     System.out.println("Total: R$ " + formatador.format(SALADA) );
+ }
+ else if (CODIGO == 3)
+ {
+     System.out.println("Total: R$ " + formatador.format(BACON) );
+ }
+ else if (CODIGO ==4)
+ {
+     System.out.println("Total: R$ " + formatador.format(TORRADA) );
+ }
+ else if (CODIGO ==5)
+ {
+     System.out.println("Total: R$ " + formatador.format(REFRI));
+ }
+    }
+ 
+}
