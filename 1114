@@ -1,0 +1,29 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       Scanner scan = new Scanner(System.in);
+		
+		int senhaCorreta=2002, senha;
+				
+		do 
+		{
+			senha=scan.nextInt();
+			
+			if(senha!=senhaCorreta)
+			{
+				System.out.println("Senha Invalida");
+			}
+			else if(senha==senhaCorreta)
+			{
+				System.out.println("Acesso Permitido");
+			}
+		}
+		while(senhaCorreta!=senha);
+ 
+    }
+ 
+}
