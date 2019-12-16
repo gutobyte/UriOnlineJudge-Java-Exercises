@@ -1,0 +1,55 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner scan = new Scanner(System.in);
+		
+		String ENTRADA01, ENTRADA02, ENTRADA03;
+		
+		ENTRADA01 = scan.next();
+		ENTRADA02 = scan.next();
+		ENTRADA03 = scan.next();
+		
+		
+		
+		if (ENTRADA01.equals("vertebrado") && ENTRADA02.equals("ave") && ENTRADA03.equals("carnivoro"))
+		{
+			System.out.println("aguia");
+		}
+		
+		else if (ENTRADA01.equals("vertebrado") && ENTRADA02.equals("ave") && ENTRADA03.equals("onivoro"))
+		{
+			System.out.println("pomba");
+		}
+		else if (ENTRADA01.equals("vertebrado") && ENTRADA02.equals("mamifero") && ENTRADA03.equals("onivoro"))
+		{
+			System.out.println("homem");
+		}
+		else if (ENTRADA01.equals("vertebrado") && ENTRADA02.equals("mamifero") && ENTRADA03.equals("herbivoro"))
+		{
+			System.out.println("vaca");
+		}
+		else if (ENTRADA01.equals("invertebrado") && ENTRADA02.equals("inseto") && ENTRADA03.equals("hematofago"))
+		{
+			System.out.println("pulga");
+		}
+		else if (ENTRADA01.equals("invertebrado") && ENTRADA02.equals("inseto") && ENTRADA03.equals("herbivoro"))
+		{
+			System.out.println("lagarta");
+		}
+		else if (ENTRADA01.equals("invertebrado") && ENTRADA02.equals("anelideo") && ENTRADA03.equals("hematofago"))
+		{
+			System.out.println("sanguessuga");
+		}
+		else
+		{
+			System.out.println("minhoca");
+		}
+			
+ 
+    }
+ 
+}
