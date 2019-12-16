@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        String NOME;
+ double SALARIOFIXO, TOTALVENDAS, SALARIOFINAL, COMISSAO;
+  
+ Scanner scan = new Scanner(System.in);
+ DecimalFormat formatador = new DecimalFormat("0.00");
+ 
+ NOME = scan.next();
+ SALARIOFIXO = scan.nextDouble();
+ TOTALVENDAS = scan.nextDouble();
+ 
+ COMISSAO = (15 * TOTALVENDAS) / 100;
+ SALARIOFINAL = SALARIOFIXO + COMISSAO;
+ 
+ System.out.println("TOTAL = R$ " + formatador.format(SALARIOFINAL));
+    }
+ 
+}
