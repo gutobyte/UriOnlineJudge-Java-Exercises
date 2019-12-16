@@ -1,0 +1,27 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+      double A, B, C, MEDIA, pA, pB, pC;
+  pA = 2;
+  pB = 3;
+  pC = 5;
+  
+  Scanner scan = new Scanner(System.in);
+  DecimalFormat formatador = new DecimalFormat("0.0");
+  
+  A = scan.nextDouble();
+  B = scan.nextDouble();
+  C = scan.nextDouble();
+  
+ MEDIA = ((A * pA) + (B * pB) + (C * pC)) / (pA + pB + pC);
+ 
+ System.out.println("MEDIA = " + formatador.format(MEDIA));
+ 
+    }
+ 
+}
