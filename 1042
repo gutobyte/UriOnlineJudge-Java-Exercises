@@ -1,0 +1,82 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+     Scanner scan = new Scanner(System.in);
+		
+		int X, Y, Z;
+		
+		X = scan.nextInt();
+		Y = scan.nextInt();
+		Z = scan.nextInt();
+		
+		if (X > Y && X > Z && Y > Z)
+		{
+			System.out.println(Z);
+			System.out.println(Y);
+			System.out.println(X + "\n");
+			
+			System.out.println(X);
+			System.out.println(Y);
+			System.out.println(Z);
+		}
+		else if (X > Y && X > Z && Z > Y)
+		{
+			System.out.println(Y);
+			System.out.println(Z);
+			System.out.println(X + "\n");
+		
+			System.out.println(X);
+			System.out.println(Y);
+			System.out.println(Z);
+		}
+		
+		else if (Y > X && Y > Z && X > Z)
+			
+		{
+			System.out.println(Z);
+			System.out.println(X);
+			System.out.println(Y + "\n");
+			
+			System.out.println(X);
+			System.out.println(Y);
+			System.out.println(Z);
+		}
+		else if (Y > X && Y > Z && Z > X)
+		{
+			System.out.println(X);
+			System.out.println(Z);
+			System.out.println(Y + "\n");
+			
+			System.out.println(X);
+			System.out.println(Y);
+			System.out.println(Z);
+			
+		}
+		else if (Z > X && Z > Y && X > Y)
+		{
+			System.out.println(Y);
+			System.out.println(X);
+			System.out.println(Z + "\n");
+			
+			System.out.println(X);
+			System.out.println(Y);
+			System.out.println(Z);
+		}
+		else
+		{
+			System.out.println(X);
+			System.out.println(Y);
+			System.out.println(Z + "\n");
+			
+			System.out.println(X);
+			System.out.println(Y);
+			System.out.println(Z);
+		}
+ 
+    }
+ 
+}
