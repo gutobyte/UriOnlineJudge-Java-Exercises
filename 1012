@@ -1,0 +1,33 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       double A,B,C, AREATRIANGULO, AREACIRCULO, AREATRAPEZIO, AREAQUADRADO, AREARETANGULO, PI = 3.14159;
+	
+	Scanner scan = new Scanner (System.in);
+	DecimalFormat formatador = new DecimalFormat ("0.000");
+	
+	A = scan.nextDouble();
+	B = scan.nextDouble();
+	C = scan.nextDouble();
+	
+	AREATRIANGULO = (A * C) / 2;
+	AREACIRCULO = PI * (C * C);
+	AREATRAPEZIO = ((A + B) * C) / 2;
+	AREAQUADRADO = B * B;
+	AREARETANGULO = A * B;
+	
+	System.out.println("TRIANGULO: " + formatador.format(AREATRIANGULO));
+	System.out.println("CIRCULO: " + formatador.format(AREACIRCULO));
+	System.out.println("TRAPEZIO: " + formatador.format(AREATRAPEZIO));
+	System.out.println("QUADRADO: " + formatador.format(AREAQUADRADO));
+	System.out.println("RETANGULO: " + formatador.format(AREARETANGULO));
+ 
+ 
+    }
+ 
+}
