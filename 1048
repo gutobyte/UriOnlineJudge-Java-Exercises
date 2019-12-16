@@ -1,0 +1,65 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       Scanner scan = new Scanner(System.in);
+       
+		DecimalFormat formatador = new DecimalFormat("0.00");
+		double SALARIO, REAJUSTE, SALARIOTOTAL;
+		
+		SALARIO = scan.nextDouble();
+		
+		if (SALARIO > 0 && SALARIO <= 400)
+		{
+			REAJUSTE = (SALARIO * 15) / 100;
+			SALARIOTOTAL = SALARIO + REAJUSTE;
+			System.out.println("Novo salario: " + formatador.format(SALARIOTOTAL));
+			System.out.println("Reajuste ganho: " + formatador.format(REAJUSTE));
+			System.out.println("Em percentual: 15 %");
+		}
+		
+		else if (SALARIO > 400 && SALARIO <= 800)
+			
+		{
+			REAJUSTE = (SALARIO * 12) /100;
+			SALARIOTOTAL = SALARIO + REAJUSTE;
+			System.out.println("Novo salario: " + formatador.format(SALARIOTOTAL));
+			System.out.println("Reajuste ganho: " + formatador.format(REAJUSTE));
+			System.out.println("Em percentual: 12 %");
+		}
+		
+		else if (SALARIO > 800 && SALARIO <= 1200)
+		{
+			REAJUSTE = (SALARIO * 10) /100;
+			SALARIOTOTAL = SALARIO + REAJUSTE;
+			System.out.println("Novo salario: " + formatador.format(SALARIOTOTAL));
+			System.out.println("Reajuste ganho: " + formatador.format(REAJUSTE));
+			System.out.println("Em percentual: 10 %");
+		}
+		
+		else if (SALARIO > 1200 && SALARIO <= 2000)
+			
+		{
+			REAJUSTE = (SALARIO * 7) /100;
+			SALARIOTOTAL = SALARIO + REAJUSTE;
+			System.out.println("Novo salario: " + formatador.format(SALARIOTOTAL));
+			System.out.println("Reajuste ganho: " + formatador.format(REAJUSTE));
+			System.out.println("Em percentual: 7 %");
+		}
+		
+		else 
+		{
+			REAJUSTE = (SALARIO * 4) /100;
+			SALARIOTOTAL = SALARIO + REAJUSTE;
+			System.out.println("Novo salario: " + formatador.format(SALARIOTOTAL));
+			System.out.println("Reajuste ganho: " + formatador.format(REAJUSTE));
+			System.out.println("Em percentual: 4 %");
+		}
+ 
+    }
+ 
+}
