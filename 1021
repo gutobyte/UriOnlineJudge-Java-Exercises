@@ -1,0 +1,53 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+      float VALOR;
+		double NOTACEM, NOTACINQUENTA, NOTAVINTE, NOTADEZ, NOTACINCO, NOTADOIS;
+		double MOEDAUM, MOEDACINQUENTA, MOEDAVINTECINCO, MOEDADEZ, MOEDACINCO, MOEDAUMCENT;
+		
+
+		
+		DecimalFormat formatador = new DecimalFormat("0");
+		Scanner scan = new Scanner(System.in);
+		
+		VALOR = scan.nextFloat();
+		
+		NOTACEM = (VALOR / 100);
+		NOTACINQUENTA =  (VALOR % 100) / 50;
+		NOTAVINTE = ((VALOR % 100) % 50) / 20;
+		NOTADEZ =  (((VALOR % 100) % 50) % 20) / 10;
+		NOTACINCO = (((((VALOR % 100) % 50) % 20) % 10) / 5);
+		NOTADOIS = (((((VALOR % 100) % 50) % 20) % 10) % 5) /2;
+		
+		
+		
+		MOEDAUM = ((((((VALOR % 100) % 50) % 20) % 10) % 5) %2) / 1;
+		MOEDACINQUENTA = (((((((VALOR % 100) % 50) % 20) % 10) % 5) %2) % 1) / 0.50;
+		MOEDAVINTECINCO =((((((((VALOR % 100) % 50) % 20) % 10) % 5) %2) % 1) % 0.50) / 0.25;
+		MOEDADEZ =(((((((((VALOR % 100) % 50) % 20) % 10) % 5) %2) % 1) % 0.50) % 0.25) / 0.10;
+		MOEDACINCO = ((((((((((VALOR % 100) % 50) % 20) % 10) % 5) %2) % 1) % 0.50) % 0.25)% 0.10) / 0.05;
+		MOEDAUMCENT = (((((((((((VALOR % 100) % 50 )% 20) % 5) % 2) % 1) % 0.5) % 0.25) % 0.1) % 0.05) / 0.01);
+		
+		System.out.println("NOTAS:");
+		System.out.println(formatador.format((int)NOTACEM) + " nota(s) de R$ 100.00");
+		System.out.println(formatador.format((int)NOTACINQUENTA) + " nota(s) de R$ 50.00");
+		System.out.println(formatador.format((int)NOTAVINTE) + " nota(s) de R$ 20.00");
+		System.out.println(formatador.format((int)NOTADEZ) + " nota(s) de R$ 10.00");
+		System.out.println(formatador.format((int)NOTACINCO) + " nota(s) de R$ 5.00");
+		System.out.println(formatador.format((int)NOTADOIS) + " nota(s) de R$ 2.00");
+		System.out.println("MOEDAS:");
+		System.out.println(formatador.format((int)MOEDAUM) + " moeda(s) de R$ 1.00");
+		System.out.println(formatador.format((int)MOEDACINQUENTA) + " moeda(s) de R$ 0.50");
+		System.out.println(formatador.format((int)MOEDAVINTECINCO) + " moeda(s) de R$ 0.25");
+		System.out.println(formatador.format((int)MOEDADEZ) + " moeda(s) de R$ 0.10");
+		System.out.println(formatador.format((int)MOEDACINCO) + " moeda(s) de R$ 0.05");
+		System.out.println(formatador.format(MOEDAUMCENT) + " moeda(s) de R$ 0.01");
+ 
+    }
+ 
+}
