@@ -1,0 +1,23 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        double RAIO, PI = 3.14159, VOLUME;
+	
+	Scanner scan = new Scanner(System.in);
+	DecimalFormat formatador = new DecimalFormat("0.000");
+	
+	RAIO = scan.nextDouble();
+	
+	VOLUME = (4 * PI * (RAIO * RAIO * RAIO)) / 3; 
+	
+ 
+ System.out.println("VOLUME = " + formatador.format(VOLUME));
+ 
+    }
+ 
+}
