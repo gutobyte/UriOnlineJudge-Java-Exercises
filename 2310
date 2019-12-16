@@ -1,0 +1,65 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        DecimalFormat formatador = new DecimalFormat("0.00");
+		Scanner scan= new Scanner(System.in);
+		
+		int n;
+		n=scan.nextInt();
+		String nomes[]= new String[n];
+		int saque[]= new int[n];
+		int bloqueio[]= new int[n];
+		int ataque[]= new int[n];
+		
+		int saqueA[]= new int[n];
+		int bloqueioA[]= new int[n];
+		int ataqueA[]= new int[n];
+		
+		double tsaque = 0, tbloqueio = 0, tataque = 0;
+		double tsaqueA = 0, tbloqueioA = 0, tataqueA = 0;
+		
+		for(int i=0;i<nomes.length;i++)
+		{
+			nomes[i]=scan.next();
+			saque[i]=scan.nextInt();
+			bloqueio[i]=scan.nextInt();
+			ataque[i]=scan.nextInt();
+			
+			saqueA[i]=scan.nextInt();
+			bloqueioA[i]=scan.nextInt();
+			ataqueA[i]=scan.nextInt();			
+
+		}
+		//totalTENTATIVA =saque 21 / bloqueio 30 / ataque: 15
+		//totalAcerto = saque 4/ bloqueio 19 / ataque: 12
+		
+		for(int i=0;i<nomes.length;i++)
+		{
+		
+			tsaque += saque[i];
+			tbloqueio +=bloqueio[i];
+			tataque +=ataque[i];
+			
+			tsaqueA += saqueA[i];
+			tbloqueioA +=bloqueioA[i];
+			tataqueA +=ataqueA[i];
+
+		}
+		
+		
+		tsaque = tsaqueA *100 /tsaque;
+		tbloqueio = tbloqueioA *100 /tbloqueio;
+		tataque = tataqueA *100 /tataque;
+		
+         System.out.println("Pontos de Saque: "+ formatador.format(tsaque)+ " %.");
+         System.out.println("Pontos de Bloqueio: "+ formatador.format(tbloqueio)+ " %.");
+         System.out.println("Pontos de Ataque: "+ formatador.format(tataque)+ " %.");
+	}
+
+}
+ 
