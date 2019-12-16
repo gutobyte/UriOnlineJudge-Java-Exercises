@@ -1,0 +1,33 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+      int PECA1, NUMEROPECA1, PECA2, NUMEROPECA2;
+	
+ double VALOR1, VALOR2, VALOR01, VALOR02, PAGAMENTO;
+  
+ Scanner scan = new Scanner(System.in);
+ DecimalFormat formatador = new DecimalFormat("0.00");
+ 
+ PECA1 = scan.nextInt();
+ NUMEROPECA1 = scan.nextInt();
+ VALOR1 = scan.nextDouble();
+ 
+ PECA2 = scan.nextInt();
+ NUMEROPECA2 = scan.nextInt();
+ VALOR2 = scan.nextDouble();
+ 
+ VALOR01 = NUMEROPECA1 * VALOR1;
+ VALOR02 = NUMEROPECA2 * VALOR2;
+ 
+ PAGAMENTO = VALOR01 + VALOR02;
+ 
+ System.out.println("VALOR A PAGAR: R$ " + formatador.format(PAGAMENTO));
+ 
+    }
+ 
+}
