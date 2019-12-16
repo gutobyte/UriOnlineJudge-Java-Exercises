@@ -1,0 +1,65 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+     Scanner scan = new Scanner(System.in);
+        
+        int VETORpar[] = new int[5];
+        int VETORimpar[] = new int[5];
+        int par = 0;
+        int impar = 0;
+        
+        for (int i = 0; i < 15; i++) 
+        {
+            int numero = scan.nextInt();
+            if (numero % 2 == 0) 
+            {
+                VETORpar[par] = numero;
+                par++;
+            } 
+            else 
+            {
+                VETORimpar[impar] = numero;
+                impar++;
+            }
+            if (par == 5) 
+            {
+                int c = 0;
+                while (c < par) 
+                {
+                    System.out.println("par[" + c + "] = " + VETORpar[c]);
+                    c++;
+                }
+                par = 0;
+            }
+            if (impar == 5) 
+            {
+                int d = 0;
+                while (d < impar) 
+                {
+                    System.out.println("impar[" + d + "] = " + VETORimpar[d]);
+                    d++;
+                }
+                impar = 0;
+            }
+            if (i == 14) 
+            {
+                int d = 0;
+                while (d < impar)
+                {
+                    System.out.println("impar[" + d + "] = " + VETORimpar[d]);
+                    d++;
+                }
+                int c = 0;
+                while (c < par) 
+                {
+                    System.out.println("par[" + c + "] = " + VETORpar[c]);
+                    c++;
+                }
+            }
+        }
+    }
+}
