@@ -1,0 +1,54 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+     Scanner scan = new Scanner(System.in);
+		
+		int numero,min = 0,aux = 0, posição = 0;
+        boolean checagem = false;
+
+
+        numero = scan.nextInt();
+
+        int vetor[] = new int[numero];
+
+   
+
+        for (int i = 0; i < numero; i++) {
+
+            vetor[i] = scan.nextInt();
+
+        }
+
+
+
+        for (int j = 0; j < numero; j++) {
+
+            aux = vetor[j];
+
+            if (checagem == false) {
+
+                min = aux;
+
+                checagem = true;
+
+            }
+
+            if (aux < min) {
+
+                min = aux;
+
+                posição = j;
+
+            }
+
+        }
+
+        System.out.println("Menor valor: "+min);
+        System.out.println("Posicao: "+posição);
+
+    }
+}
