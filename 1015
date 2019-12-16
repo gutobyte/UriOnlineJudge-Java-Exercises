@@ -1,0 +1,31 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+ 
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       double x1, x2, y1, y2, DISTANCIAx, DISTANCIAxx, DISTANCIAy, DISTANCIAyy, DISTANCIASEMIFINAL, DISTANCIAFINAL1;
+	
+	Scanner scan = new Scanner(System.in);
+	DecimalFormat formatador = new DecimalFormat("0.0000");
+	
+	x1 = scan.nextDouble();
+	y1 = scan.nextDouble();
+	x2 = scan.nextDouble();
+	y2 = scan.nextDouble();
+	
+	DISTANCIAx =  (x2 - x1);
+	DISTANCIAxx = DISTANCIAx * DISTANCIAx;
+	DISTANCIAy = (y2 - y1);
+	DISTANCIAyy = DISTANCIAy * DISTANCIAy;
+	DISTANCIASEMIFINAL = DISTANCIAxx + DISTANCIAyy;
+	DISTANCIAFINAL1 = Math.sqrt(DISTANCIASEMIFINAL);
+	
+			
+	System.out.println(formatador.format(DISTANCIAFINAL1));
+    }
+ 
+}
