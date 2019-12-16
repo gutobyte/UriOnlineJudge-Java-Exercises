@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        int IDADE, DIAS, MESES = 12, ANOS;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		IDADE = scan.nextInt();
+		
+		ANOS = IDADE / 365;
+		MESES = (IDADE % 365) / 30;
+		DIAS = (IDADE % 365) % 30;
+		
+		
+		System.out.println(ANOS + " ano(s)");
+		System.out.println(MESES + " mes(es)");
+		System.out.println(DIAS + " dia(s)");
+ 
+    }
+ 
+}
