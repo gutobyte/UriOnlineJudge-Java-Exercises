@@ -1,0 +1,33 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        int N =100, entrada, maior= 0,posicao= 0;
+		
+		Scanner scan =new Scanner(System.in);
+		
+		for (int i = 1; i <= N; i++) {
+			
+			entrada =scan.nextInt();
+			
+			if (maior > entrada) 
+			{
+				maior = maior;
+				posicao= posicao;	
+			}
+			else {
+				maior = entrada;
+				posicao = i;
+			}
+			
+			
+		}
+		System.out.println(maior);
+		System.out.println(posicao);
+ 
+    }
+ 
+}
