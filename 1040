@@ -1,0 +1,58 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+    Scanner scan = new Scanner(System.in);
+		DecimalFormat formatador = new DecimalFormat("0.0");
+		
+		float N1, N2, N3, N4, MEDIA, NOTAEXAME, MEDIAEXAME;
+		
+		N1 = scan.nextFloat();
+		N2 = scan.nextFloat();
+		N3 = scan.nextFloat();
+		N4 = scan.nextFloat();
+		
+		MEDIA = ((N1 * 2) + (N2 * 3) + (N3 * 4) + (N4 * 1)) / 10;
+		
+		
+		if (MEDIA >= 7.0)
+		{
+			System.out.println("Media: " + formatador.format(MEDIA));
+			System.out.println("Aluno aprovado.");
+		}
+		
+		else if (MEDIA < 5.0)
+		{
+			System.out.println("Media: " + formatador.format(MEDIA));
+			System.out.println("Aluno reprovado.");
+			
+		}
+		else if (MEDIA >= 5.0 && MEDIA <= 6.9)
+		{
+			
+			System.out.println("Media: " + formatador.format(MEDIA));
+			System.out.println("Aluno em exame.");
+			NOTAEXAME = scan.nextFloat();
+			MEDIAEXAME = (NOTAEXAME + MEDIA) / 2;
+			
+			if (NOTAEXAME >= 5.0)
+			{
+				System.out.println("Nota do exame: " + NOTAEXAME);
+				System.out.println("Aluno aprovado.");
+				System.out.println("Media final: " + formatador.format(MEDIAEXAME));
+			}
+			else 
+			{
+				System.out.println("Nota do exame: " + NOTAEXAME);
+				System.out.println("Aluno reprovado.");
+				System.out.println("Media final: " + formatador.format(MEDIAEXAME));
+			}
+		}
+ 
+    }
+ 
+}
