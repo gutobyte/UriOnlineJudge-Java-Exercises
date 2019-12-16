@@ -1,0 +1,28 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       Scanner scan = new Scanner(System.in);
+int L, C;
+		
+		while (scan.hasNext()){
+			int N = scan.nextInt();
+			if (N>=3 && N<70)
+				for(L=1 ; L<=N ; L++)
+					for(C=1 ; C<=N ; C++){
+						if (C+L-1 == N)
+							System.out.printf("2");
+						else if (C==L)
+							System.out.printf("1");
+						else 
+							System.out.printf("3");
+						if (C>=N)
+							System.out.printf("\n");
+					}
+		}
+	scan.close();
+	}
+}
