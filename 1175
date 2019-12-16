@@ -1,0 +1,30 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+      Scanner scan = new Scanner(System.in);
+        int vetor[] = new int[20];
+        
+        for (int i = 0; i < 20; i++) {
+            vetor[i] = scan.nextInt();
+        }
+        
+        int Final = vetor.length - 1;
+        for (int i = 0; i < 20 / 2; i++) {
+            int aux = vetor[i];
+            vetor[i] = vetor[Final];
+            vetor[Final] = aux;
+            Final--;
+        }
+               
+        for (int i = 0; i < 20; i++) {
+            System.out.println("N[" + i + "]" + " = " + vetor[i]);
+        }
+    
+ 
+    }
+ 
+}
