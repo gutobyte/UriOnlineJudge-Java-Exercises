@@ -1,0 +1,34 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       int numero, nota100, nota50, nota20, nota10, nota2, nota5, nota1;
+		
+		Scanner scan = new Scanner(System.in);
+		
+		numero = scan.nextInt();
+		
+		nota100 = numero / 100;
+		nota50 = (numero % 100) / 50;
+		nota20 = (numero % 50) / 20;
+		nota10 = (((numero % 100) % 50) % 20) / 10;
+		nota5 =  ((((numero % 100) % 50) % 20) % 10) / 5;
+		nota2 = (((((numero % 100) % 50) % 20) % 10) % 5) / 2;
+		nota1 = ((((((numero % 100)% 50)% 20)%10)%5)%2) / 1;
+		
+		System.out.println(numero);
+		System.out.println(nota100 + " nota(s) de R$ 100,00");
+		System.out.println(nota50 + " nota(s) de R$ 50,00");
+		System.out.println(nota20 + " nota(s) de R$ 20,00");
+		System.out.println(nota10 + " nota(s) de R$ 10,00");
+		System.out.println(nota5 + " nota(s) de R$ 5,00");
+		System.out.println(nota2 + " nota(s) de R$ 2,00");
+		System.out.println(nota1 + " nota(s) de R$ 1,00");
+ 
+    }
+ 
+}
