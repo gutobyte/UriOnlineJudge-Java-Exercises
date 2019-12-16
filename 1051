@@ -1,0 +1,48 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner scan = new Scanner(System.in);
+		DecimalFormat formatador = new DecimalFormat("0.00");
+		
+		
+		double SALARIO, SALARIOTOTAL1, SALARIOTOTAL2, SALARIOTOTAL3;
+		
+		SALARIO = scan.nextDouble();
+		
+		
+		
+		if (SALARIO >= 0 && SALARIO <= 2000)
+		{
+			System.out.println("Isento");
+		}
+		
+		else if (SALARIO > 2000.01 && SALARIO <= 3000)
+		{
+			SALARIOTOTAL1 = ((SALARIO - 2000) * 8) / 100;
+			
+		         System.out.println("R$ " + formatador.format(SALARIOTOTAL1));
+		}
+		
+		else if (SALARIO > 3000.01 && SALARIO <= 4500)
+		{
+			SALARIOTOTAL2 = (((SALARIO - 3000) * 18) / 100) + (((1000 * 8) / 100));  
+					
+			System.out.println("R$ " + formatador.format(SALARIOTOTAL2));
+			
+		}
+		
+		else
+		{
+			SALARIOTOTAL3 = (((SALARIO - 4500) * 28) / 100) + ((1500 * 18) / 100) + ((1000 * 8) / 100);
+			System.out.println("R$ " + formatador.format(SALARIOTOTAL3));
+		}
+			
+ 
+    }
+ 
+}
