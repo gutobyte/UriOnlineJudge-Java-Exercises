@@ -1,0 +1,40 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat; 
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+
+Scanner scan = new Scanner(System.in);
+		DecimalFormat formatador = new DecimalFormat("0.00000");
+		
+		double A, B, C, DELTA, BHASKARA1, BHASKARA2;
+		
+		A = scan.nextDouble();
+		B = scan.nextDouble();
+		C = scan.nextDouble();
+		
+		DELTA = Math.pow(B, 2) + (-4 * (A * C));
+		
+		BHASKARA1 = ((- (B) + Math.sqrt(DELTA)) / (2* A));
+		BHASKARA2 = ((- (B) - Math.sqrt(DELTA)) / (2* A));
+
+		if (DELTA < 0 || A == 0)
+		{
+			System.out.println("Impossivel calcular");
+		}
+		
+		else
+			
+		{
+		System.out.println("R1 = " + formatador.format(BHASKARA1));
+		System.out.println("R2 = " + formatador.format(BHASKARA2));
+		
+		}
+ 
+        
+ 
+    }
+ 
+}
