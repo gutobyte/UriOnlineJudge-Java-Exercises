@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        int X;
+	double Y, MEDIO;
+	
+	Scanner scan = new Scanner(System.in);
+	DecimalFormat formatador = new DecimalFormat("0.000");
+	
+	X = scan.nextInt();
+	Y = scan.nextDouble();
+	
+	MEDIO = X / Y;
+	
+	System.out.println(formatador.format(MEDIO) + " km/l");
+ 
+    }
+ 
+}
