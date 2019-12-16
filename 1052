@@ -1,0 +1,66 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       Scanner scan = new Scanner(System.in);
+		
+		int NUMERO;
+		
+		NUMERO = scan.nextInt();
+		
+		if (NUMERO == 1)
+		{
+			System.out.println("January");
+		}
+		else if (NUMERO == 2)
+		{
+			System.out.println("February");
+		}
+		else if (NUMERO == 3)
+		{
+			System.out.println("March");
+		}
+		else if (NUMERO == 4)
+		{
+			System.out.println("April");
+		}
+		else if (NUMERO == 5)
+		{
+			System.out.println("May");
+		}
+		else if (NUMERO == 6)
+		{
+			System.out.println("June");
+		}
+		else if (NUMERO == 7)
+		{
+			System.out.println("July");
+		}
+		else if (NUMERO == 8)
+		{
+			System.out.println("August");
+		}
+		else if (NUMERO == 9)
+		{
+			System.out.println("September");
+		}
+		else if (NUMERO == 10)
+		{
+			System.out.println("October");
+		}
+		else if (NUMERO == 11)
+		{
+			System.out.println("November");
+		}
+		else
+		{
+			System.out.println("December");
+		}
+
+ 
+    }
+ 
+}
